@@ -55,7 +55,7 @@ def main():
     choice = st.sidebar.selectbox("Select Activity", activities)
     
     if choice == 'Summarize Via Text':
-        st.subheader("Summary using NLP")
+        st.subheader("Summarize your Text")
         raw_text = st.text_area("Enter Text Here","Type here")
         
         if st.button("Summarize Via Text"):

@@ -9,7 +9,8 @@ from textblob import TextBlob
 
 from gingerit.gingerit import GingerIt
 
-
+import nltk; 
+nltk.download('punkt')
 
 nlp = spacy.load('en_core_web_sm')
 

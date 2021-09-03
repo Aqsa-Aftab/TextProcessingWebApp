@@ -10,3 +10,4 @@ en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_
 sumy==0.8.1
 tokenizers==0.10.3
 nltk==3.6.2
+transformers==4.9.2

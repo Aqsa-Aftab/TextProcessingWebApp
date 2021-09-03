@@ -13,6 +13,7 @@ import nltk;
 nltk.download('punkt')
 
 nlp = spacy.load('en_core_web_sm')
+from transformers import pipeline
 
 #Sumy packages 
 from sumy.parsers.plaintext import PlaintextParser
@@ -43,6 +44,11 @@ def sumy_summarizer(docx):
     summary_list = [str(sentence) for sentence in summary]
     result = ' '.join(summary_list)
     return result
+
+@st.cache(allow_output_mutation=True)
+def load_qa_model():
+    model = pipeline("question-answering")
+    return model
 
 
 
@@ -130,8 +136,18 @@ def main():
         st.success("AI Successfully generated the below text ")
         st.write(gpt_text)
         
-    
+    if choice == 'Question from text':
+        qa = load_qa_model()
+        st.title("Ask Questions about your Text")
+        sentence = st.text_area('Please paste your article :', height=30)
+        question = st.text_input("Questions from this article?")
+        button = st.button("Get me Answers")
         
+        
+        with st.spinner("Discovering Answers.."):
+            if button and sentence:
+                answers = qa(question=question, context=sentence)
+                st.write(answers['answer'])   
             
                  
     

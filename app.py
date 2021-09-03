@@ -49,7 +49,7 @@ def sumy_summarizer(docx):
 
 def main():
     
-    st.title("Text Editor Web App")
+    st.title("Text Processing Web App")
     
     activities = ["Summarize Via Text", "Summarize via URL", "Translate text","Automatic text generation" ,"Grammar Check", "Spell correction"]
     choice = st.sidebar.selectbox("Select Activity", activities)
@@ -117,7 +117,7 @@ def main():
             st.markdown( str(result_dict["result"]))    
         
     if choice == 'Automatic text generation':
-        st.subheader("Aumtomatic Text Generation")
+        st.subheader("Automatic Text Generation")
         ai = aitextgen()
         prompt_text = st.text_input(label = "Enter your Prompt text...",
             value = "Computer is beautiful")

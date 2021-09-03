@@ -1,0 +1,11 @@
+streamlit==0.85.1
+spacy==3.1.1
+bs4==0.0.1
+beautifulsoup4==4.9.3
+aitextgen==0.5.2
+textblob==0.15.3
+urllib3==1.26.6
+gingerit==0.8.2
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.1.0/en_core_web_sm-3.1.0-py3-none-any.whl
+sumy==0.8.1
+tokenizers==0.10.3

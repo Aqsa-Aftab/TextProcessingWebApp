@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 import spacy
 
 from aitextgen import aitextgen #for ai text gen

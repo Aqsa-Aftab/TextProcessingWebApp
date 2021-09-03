@@ -57,7 +57,7 @@ def main():
     
     st.title("Text Processing Web App")
     
-    activities = ["Summarize Via Text", "Summarize via URL", "Translate text","Automatic text generation" ,"Grammar Check", "Spell correction"]
+    activities = ["Summarize Via Text", "Summarize via URL", "Translate text","Automatic text generation" ,"Grammar Check", "Spell correction", "Question Answer from text"]
     choice = st.sidebar.selectbox("Select Activity", activities)
     
     if choice == 'Summarize Via Text':
@@ -136,7 +136,7 @@ def main():
         st.success("AI Successfully generated the below text ")
         st.write(gpt_text)
         
-    if choice == 'Question from text':
+    if choice == 'Question Answer from text':
         qa = load_qa_model()
         st.title("Ask Questions about your Text")
         sentence = st.text_area('Please paste your article :', height=30)
